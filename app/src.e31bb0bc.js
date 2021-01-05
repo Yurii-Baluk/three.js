@@ -60781,35 +60781,33 @@ var DragRoomItemsControl3D = /*#__PURE__*/function (_EventDispatcher) {
             var intersectingPlane = intersectionData.object;
             var newLocation = new _three2.Vector3();
 
-            for (var i = 0; i < this.__draggableItems.length; i++) {
-              if (this.__draggableItems[i].visible === true) {
-                var draggableItem = this.__draggableItems[i];
-                this.box1 = this.__draggableItems[3].geometry.boundingBox.clone();
-                this.box1.applyMatrix4(this.__draggableItems[3].matrixWorld);
-
-                var box2 = this.__draggableItems[2].geometry.boundingBox.clone();
-
-                box2.applyMatrix4(this.__draggableItems[2].matrixWorld);
-                console.log(box2.intersectsBox(this.box1));
-                console.log(this.__selected); //console.log(this.box1);
-                //console.log(box2);
-              }
+            for (var i = 0; i < this.__draggableItems.length; i++) {// if(this.__draggableItems[i].visible === true){
+              //     let draggableItem = this.__draggableItems[i];
+              //     this.box1 = this.__draggableItems[3].geometry.boundingBox.clone();
+              //     this.box1.applyMatrix4(this.__draggableItems[3].matrixWorld);
+              //     var box2 = this.__draggableItems[2].geometry.boundingBox.clone();
+              //     box2.applyMatrix4(this.__draggableItems[2].matrixWorld);
+              //     console.log(box2.intersectsBox(this.box1));
+              //     console.log(this.__selected)
+              //     //console.log(this.box1);
+              //     //console.log(box2);
+              // }
             }
 
             if (this.__intersection.x < intersectingPlane.room.floorRectangleSize.x - this.__selected.__size.x / 2) {
               if (this.__intersection.x > this.__selected.__size.x / 2) {
                 if (this.__intersection.z < intersectingPlane.room.floorRectangleSize.y - this.__selected.__size.y) {
                   if (this.__intersection.z > this.__selected.__size.y) {
-                    newLocation = this.__selected.position.clone();
+                    newLocation = this.__selected.position.clone(); //if(box2.intersectsBox(this.box1) === false || (this.box1.intersectsBox(box2) === false)){
 
-                    if (box2.intersectsBox(this.box1) === false || this.box1.intersectsBox(box2) === false) {
-                      this.__selected.snapToPoint(_location, normal, intersectingPlane);
-                    } else {
-                      newLocation.x = newLocation.x + 2;
-                      newLocation.z = newLocation.z + 2; //console.log(newLocation);
+                    this.__selected.snapToPoint(_location, normal, intersectingPlane); //}
+                    // else{
+                    //     newLocation.x = newLocation.x + 2;
+                    //     newLocation.z = newLocation.z + 2;
+                    //     //console.log(newLocation);
+                    //     this.__selected.snapToPoint(newLocation, normal, intersectingPlane);
+                    // }
 
-                      this.__selected.snapToPoint(newLocation, normal, intersectingPlane);
-                    }
                   }
                 }
               }
@@ -119302,7 +119300,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14656" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "26927" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

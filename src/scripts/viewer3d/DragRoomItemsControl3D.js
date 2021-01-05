@@ -136,35 +136,35 @@ export class DragRoomItemsControl3D extends EventDispatcher {
                     let newLocation = new Vector3();
 
                     for(let i = 0; i < this.__draggableItems.length; i++){
-                        if(this.__draggableItems[i].visible === true){
-                            let draggableItem = this.__draggableItems[i];
+                        // if(this.__draggableItems[i].visible === true){
+                        //     let draggableItem = this.__draggableItems[i];
 
-                            this.box1 = this.__draggableItems[3].geometry.boundingBox.clone();
-                            this.box1.applyMatrix4(this.__draggableItems[3].matrixWorld);
+                        //     this.box1 = this.__draggableItems[3].geometry.boundingBox.clone();
+                        //     this.box1.applyMatrix4(this.__draggableItems[3].matrixWorld);
             
-                            var box2 = this.__draggableItems[2].geometry.boundingBox.clone();
-                            box2.applyMatrix4(this.__draggableItems[2].matrixWorld);
+                        //     var box2 = this.__draggableItems[2].geometry.boundingBox.clone();
+                        //     box2.applyMatrix4(this.__draggableItems[2].matrixWorld);
                         
-                            console.log(box2.intersectsBox(this.box1));
-                            console.log(this.__selected)
-                            //console.log(this.box1);
-                            //console.log(box2);
-                        }
+                        //     console.log(box2.intersectsBox(this.box1));
+                        //     console.log(this.__selected)
+                        //     //console.log(this.box1);
+                        //     //console.log(box2);
+                        // }
                     }
                     if(this.__intersection.x < intersectingPlane.room.floorRectangleSize.x - this.__selected.__size.x / 2){
                         if(this.__intersection.x > this.__selected.__size.x / 2){
                             if(this.__intersection.z < intersectingPlane.room.floorRectangleSize.y - this.__selected.__size.y){
                                 if(this.__intersection.z > this.__selected.__size.y){
                                     newLocation = this.__selected.position.clone(); 
-                                    if(box2.intersectsBox(this.box1) === false || (this.box1.intersectsBox(box2) === false)){
+                                    //if(box2.intersectsBox(this.box1) === false || (this.box1.intersectsBox(box2) === false)){
                                         this.__selected.snapToPoint(location, normal, intersectingPlane);
-                                    }
-                                    else{
-                                        newLocation.x = newLocation.x + 2;
-                                        newLocation.z = newLocation.z + 2;
-                                        //console.log(newLocation);
-                                        this.__selected.snapToPoint(newLocation, normal, intersectingPlane);
-                                    }
+                                    //}
+                                   // else{
+                                    //     newLocation.x = newLocation.x + 2;
+                                    //     newLocation.z = newLocation.z + 2;
+                                    //     //console.log(newLocation);
+                                    //     this.__selected.snapToPoint(newLocation, normal, intersectingPlane);
+                                    // }
                                 }
                             }
                         }
