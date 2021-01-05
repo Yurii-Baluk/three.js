@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Floorlayout | Anatol company</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="bp3d-js-app">
+        <div id="bp3djs-viewer2d"></div>
+        <div id="bp3djs-viewer3d"></div>
+        <div id="bp3djs-items" style="visibility: hidden;">
+            <input id="selected-item-menu" class="selected-item-menu" type="hidden" value="">
+            <!--<nav class="item-menu">
+                <nav id="nav">
+                    <ul class="menu">
+                      <li class="menu-item"><a href="#">Presses</a></li>
+                      <li class="menu-item"><a href="#">Conveyor Dryers</a>
+                        <ul class="submenu">
+                          <li class="submenu-item"><a id="testchache" data-click="Tennis Table" href="#">volt_model_L_16st.glb</a></li>
+                          <li class="submenu-item"><a href="#">TableTennisTable.glb</a></li>
+                          <li class="submenu-item"><a href="#">drying</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item"><a href="#">Flash Cure Units</a>
+                        <ul class="submenu">
+                          <li class="submenu-item"><a href="#">item3_1</a></li>
+                          <li class="submenu-item"><a href="#">item3_2</a></li>
+                          <li class="submenu-item"><a href="#">item3_3</a>
+                            <ul class="submenu-level2">
+                                <li class="submenu-item"><a href="#">item4_1</a></li>
+                                <li class="submenu-item"><a href="#">item4_2</a></li>
+                                <li class="submenu-item"><a href="#">item4_3</a></li>
+                              </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu-item"><a href="#">Pre-Press</a></li>
+                    </ul>
+                  </nav>
+
+                
+            </nav>-->
+
+
+            <nav class="item-menu" id="menu">
+                <ul class="menu">
+                    <li>
+                        <a href="#"><i class="icon-home"></i>Presses</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">VOLT All-Electric Series</a>
+                                <ul>
+                                    <li><a class="sub-menu-item" data-name="volt_model_L_6st" href="#">VOLT L - 6 stations</a></li>
+                                    <li><a class="sub-menu-item" data-name="volt_model_L_8st" href="#">VOLT L - 8 stations</a></li>
+                                    <li><a class="sub-menu-item" data-name="volt_model_L_10st" href="#">VOLT L - 10 stations</a></li>
+                                    <li><a class="sub-menu-item" data-name="volt_model_L_12st" href="#">VOLT L - 12 stations</a></li>
+                                    <li><a class="sub-menu-item" data-name="volt_model_L_14st" href="#">VOLT L - 14 stations</a></li>
+                                    <li><a class="sub-menu-item" data-name="volt_model_L_16st" href="#">VOLT L - 16 stations</a></li>
+                                    <li><a class="sub-menu-item" data-name="volt_model_L_18st" href="#">VOLT L - 18 stations</a></li>
+                                    <li><a class="sub-menu-item" data-name="volt_model_L_20st" href="#">VOLT L - 20 stations</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">VECTOR Series</a></li>
+                            <li><a href="#">TITAN Series</a></li>
+                            <li><a href="#">Specialty Automatic Presses</a></li>
+                            <li><a href="#">Manual Presses</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a  href="#"><i class="icon-user"></i>Conveyor Dryers</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Vulcan Series Gas Conveyor Dryers</a>
+                                <ul>
+                                    <li><a class="sub-menu-item" data-name="TableTennisTable" href="#">Tennis Table</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Solutions Electric Dryer</a></li>
+                            <li><a href="#">Ultra Electric Dryer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a  href="#"><i class="icon-camera"></i>Flash Cure Units</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">COMET PRIME FLASH CURE UNIT</a>
+                            </li>
+                            <li>
+                                <a href="#">Pilot Flash Cure Unit</a>
+                            </li>
+                            <li>
+                                <a href="#">Уровень 3 меню</a>
+                                <ul>
+                                    <li><a href="#">Подменю 4</a></li>
+                                    <li><a href="#">Подменю 5</a></li>
+                                    <li><a href="#">Подменю 6</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a  href="#"><i class="icon-bullhorn"></i>Pre-Press</a>
+                    </li>
+                    <!--<li>
+                        <a  href="#"><i class="icon-envelope-alt"></i>Контакты</a>
+                    </li>-->
+                </ul>
+            </nav>
+
+           
+
+        </div>
+        
+    </div>
+    <link href="./styles/main.css" rel="stylesheet">
+    <script src="./index.js"></script> 
+    <script>  
+    $(document).ready(function() {
+
+        // var nav = document.getElementById('nav');
+        // nav.addEventListener('click', function(e) {
+        // var target = e.target;
+
+        // var targetParent = target.closest('.menu-item');
+        // var targetParentSub = target.closest('.submenu');
+
+        // if (targetParent) {
+        //     var subm = targetParent.getElementsByClassName('submenu')[0];
+        //     close();
+        //     if (subm) {
+        //         subm.style.display = 'block';
+        //     }
+        // }
+        // if (targetParentSub) {
+        //     var submSubm = targetParent.getElementsByClassName('submenu-level2')[0];
+        //     close();
+        //     if (submSubm) {
+        //         submSubm.style.display = 'block';
+        //     }
+        // }
+        // });
+
+        // function close() {
+        // var s = document.getElementsByClassName('submenu');
+        //     for (var i = 0; i < s.length; i++) {
+        //         s[i].style.display = 'none';
+        //     }
+        // }
+
+        $(".submenu-item a").on("click", function(){
+           var a =  $(this).text();
+           $("#selected-item-menu").val(a);
+          // console.log($("#selected-item-menu").val())
+        })
+
+        $("#wrap_popup1").fadeIn(250);
+    });
+        
+        $(".category-item1").on("click", function(){
+            $("#category1").css("display", "block");
+        })
+        $(".category-item2").on("click", function(){
+            $("#category2").css("display", "block");
+        })
+        $(".category-item3").on("click", function(){
+            $("#category3").css("display", "block");
+        })
+        $(".category-item4").on("click", function(){
+            $("#category4").css("display", "block");
+        })
+        $(".category-item5").on("click", function(){
+            $("#category4").css("display", "block");
+        })
+        $(".category-item6").on("click", function(){
+            $("#category5").css("display", "block");
+        })
+
+        function closePopup(divPopup) {
+            $(divPopup).fadeOut(250);
+        }
+       
+        $(".back-btn").on("click", function(){
+            console.log($(".sub-sub-category").css("display"))
+            if($(".sub-sub-category").css("display", "none")){
+                $(this).closest(".sub-category-items").css("display", "none");
+            }
+            if($(".sub-sub-category").css("display", "block")){
+                $(".sub-sub-category").css("display", "none");
+            }
+        })
+
+        $(".menu-level1").on("click", function(){
+            if($(this).children('.dropdown-level1').css("display") == 'none'){
+                $(this).children('.dropdown-level1').fadeIn();
+            }else{
+                $(this).children('.dropdown-level1').fadeOut();
+            }
+            // if($(this).children('.dropdown-level1').css("display") == 'block'){
+            //     $(this).children('.dropdown-level1').fadeOut()
+            // }
+        })
+
+        $('.dropdown-level1 li a').on("click", function(){
+            // $(this).parent().off();
+            var b = $(this).text();
+            $(".selected-item-menu").val(b)
+        })
+
+        $(".hover-link").on("click", function(e){
+            e.preventDefault;
+        })
+        $(".item").on("click", function(){
+            $(this).find(".sub-sub-category").css("display", "block");
+        })
+       
+        
+    </script>
+    <div id="wrap_popup1" class="wrap_popup">
+		<div class="popup">
+			<div class="title">
+				<p>Disclaimer</p>
+			</div>
+			<div class="box">
+				<p>The models used in this program were designed to demonstrate the size of the machines and their placement in a virtual space that you, the user, will create according to the size of your actual current or planned production workspace. The models are not intended to be exact depictions of the real-life machines.</p>
+				<center><button onClick="closePopup('#wrap_popup1')">I agree</button></center>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

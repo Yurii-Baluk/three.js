@@ -1,0 +1,60 @@
+{
+    "name": "blueprint3d-js",
+    "version": "1.0.0",
+    "description": "This is the core framework of Blueprint-js for creating floorplans in 2d and 3d",
+    "main": "src/scripts/blueprint.js",
+    "scripts": {
+        "start": "webpack --mode development",
+        "app-dev": "parcel src/index.html -d app/",
+        "app-production": "parcel build src/index.html -d app/ --no-source-maps   --experimental-scope-hoisting",
+        "for-git-demo-dev": "parcel build src/index.html -d demo/ --public-url https://aalavandhaann.github.io/blueprint-js/demo/  --no-minify",
+        "for-git-demo-production": "parcel build src/index.html -d demo/ --no-source-maps --public-url https://aalavandhaann.github.io/blueprint-js/demo/",
+        "frameworkonly-dev": "parcel build src/scripts/blueprint.js --global BP3DJS --no-source-maps -d bin/ --target browser --out-file bp3djs.js  --no-minify",
+        "frameworkonly-production": "parcel build src/scripts/blueprint.js  --global BP3DJS --no-source-maps -d bin/ --target browser --out-file bp3djs.js",
+        "docs": "esdoc"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "#0K Srinivasan <ashok.srinivasan2002@gmail.com> (@aalavandhaann)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/aalavandhaann/blueprint-js/issues"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "babel-preset-latest": "^6.24.1",
+        "cssnano": "^4.1.10",
+        "esdoc": "^1.0.4",
+        "esdoc-standard-plugin": "^1.0.0",
+        "eslint": "^7.7.0",
+        "eslint-plugin-import": "^2.22.0",
+        "event-stream": ">4.0.0",
+        "livereload": "^0.7.0",
+        "npm-run-all": "^4.0.2",
+        "parcel-bundler": "^1.12.4",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12"
+    },
+    "dependencies": {
+        "@thi.ng/geom-hull": "0.0.27",
+        "bezier-js": "^2.4.0",
+        "braces": "^2.3.2",
+        "cannon": "^0.6.2",
+        "detect-touch-device": "^1.1.5",
+        "es6-enum": "^1.1.0",
+        "gsap": "^3.5.0",
+        "line-intersect": "^2.2.1",
+        "pixi-viewport": "^4.13.2",
+        "pixi.js": "^5.3.3",
+        "quicksettings": "^3.0.1",
+        "react": "^15.7.0",
+        "three": "^0.118.3",
+        "three-gltf-exporter": "0.0.1",
+        "three-reflector": "^1.0.2",
+        "three-reflector2": "0.0.6",
+        "viewer3d": "^0.1.0"
+    }
+}

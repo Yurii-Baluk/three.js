@@ -1,0 +1,9 @@
+node_modules/
+gitpush.sh~
+/.babelrc~
+*.blend1
+dist/*
+.cache/*
+3D-Models-Internet/*
+
+__pycache__
